@@ -23,10 +23,10 @@
             </dt>
         </button>
     </form>
-    
+
     @endif
     <dd class="mt-1 text-sm text-gray-900">
-        {{$task->task}}
+        <a href= "{{route('task.show',$task->id)}}" >{{$task->task}}</a>
     </dd>
     <dd class="mt-1 text-sm text-gray-500 flex flex-wrap text-right ml-12">
         <a href="{{route('task.edit', $task->id)}}">

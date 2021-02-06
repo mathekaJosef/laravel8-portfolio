@@ -66,6 +66,10 @@ class TaskController extends Controller
     public function show($id)
     {
         //
+        $task = Task::findorfail($id);
+        return view('tasks.show', [
+            'task' => $task
+        ]);
     }
 
     /**

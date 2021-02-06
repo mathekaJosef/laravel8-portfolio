@@ -19,6 +19,7 @@ Route::post('/create_task', [TaskController::class, 'store']);
 Route::get('/task/{id}/edit', [TaskController::class, 'edit'])->name('task.edit');
 Route::post('/task/{id}/edit', [TaskController::class, 'update']);
 Route::delete('/delete_task/{task}', [TaskController::class, 'destroy'])->name('task.delete');
+Route::get('/task/{id}/show', [TaskController::class, 'show'])->name('task.show');
 
 Route::post('/mark_task/{task}', [MarkController::class, 'store'])->name('task.mark');
 
